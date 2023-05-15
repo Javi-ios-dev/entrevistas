@@ -70,7 +70,6 @@ This application adheres to the api specifications set by the [Thinkster](https:
 
 
 
-More information regarding the project can be found here https://github.com/gothinkster/realworld
 
 ----------
 
