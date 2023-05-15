@@ -7,6 +7,7 @@ use App\Http\Requests\EntrevistaRequest;
 use App\Http\Resources\EntrevistaResource;
 use App\Models\Entrevista;
 use Illuminate\Http\Request;
+use DB;
 
 class EntrevistaController extends Controller
 {
@@ -17,7 +18,13 @@ class EntrevistaController extends Controller
      */
     public function index()
     {
-        return EntrevistaResource::collection(Entrevista::all());
+       //return EntrevistaResource::collection(Entrevista::all());
+        return DB::table('vacantes')
+            ->join('entrevistas', 'vacantes.id', '=', 'entrevistas.vacante')
+            ->join('prospectos', 'prospectos.id', '=', 'entrevistas.prospecto')
+            ->select('vacantes.area', 'prospectos.nombre', 'entrevistas.fecha_entrevista', 'entrevistas.notas', 'entrevistas.reclutado', 'entrevistas.id')
+            ->get();
+        
     }
 
     /**

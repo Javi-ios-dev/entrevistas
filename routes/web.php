@@ -18,9 +18,17 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', function () {
+Route::get('/entrevistas', function () {
     return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+})->middleware(['auth', 'verified'])->name('entrevistas');
+
+Route::get('/vacantes', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('vacantes');
+
+Route::get('/prospectos', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('prospectos');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

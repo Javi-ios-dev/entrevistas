@@ -16,7 +16,11 @@
         "vite": "^4.0.0"
     },
     "dependencies": {
+        "@popperjs/core": "^2.11.7",
         "@vitejs/plugin-vue": "^4.2.2",
+        "@vuepic/vue-datepicker": "^5.1.0",
+        "moment": "^2.29.4",
+        "v-calendar": "^3.0.3",
         "vue": "^3.2.36",
         "vue-loader": "^17.0.1",
         "vue-router": "^4.0.13",

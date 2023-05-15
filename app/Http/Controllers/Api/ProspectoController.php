@@ -7,6 +7,7 @@ use App\Http\Requests\ProspectoRequest;
 use App\Http\Resources\ProspectoResource;
 use App\Models\Prospecto;
 use Illuminate\Http\Request;
+use Carbon\Carbon;
 
 class ProspectoController extends Controller
 {
@@ -28,7 +29,9 @@ class ProspectoController extends Controller
      */
     public function store(ProspectoRequest $request)
     {
-        $prospecto = Prospecto::create($request->validated());
+        // $date = Carbon::parse($request->fecha_registro);
+        // $request->fecha_registro = $date;
+        $prospecto = Prospecto::create($request->validated());   
         return new ProspectoResource($prospecto);
     }
 
