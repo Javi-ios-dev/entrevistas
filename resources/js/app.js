@@ -14,7 +14,7 @@ localStorage.theme = 'light';
 
 const app = createApp({
     components: {
-       VacantesIndex
+        VacantesIndex
     }
 });
 app.use(router);
