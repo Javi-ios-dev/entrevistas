@@ -46,7 +46,6 @@
                         Activo
                     </label>
                 </div>
-
             </div>
             <br>
             <button type="submit"
