@@ -1,8 +1,6 @@
-
 <template>
     <div class="overflow-hidden overflow-x-auto min-w-full align-middle sm:rounded-md">
         <h1 class="text-4xl font-extrabold">Nueva Vacante</h1>
-
         <br>
         <div v-if="errors">
             <div v-for="(v, k) in errors" :key="k"
